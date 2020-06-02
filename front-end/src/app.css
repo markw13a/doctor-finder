@@ -1,0 +1,23 @@
+html {
+    font-family: Roboto;
+}
+
+.location-controls .inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs label, .inputs button {
+    /* Don't need to fill the screen as lat/long wouldn't usually exceed 6 digits */
+    max-width: 8rem;
+}
+
+.inputs label {
+    padding-bottom: 0.5rem;
+}
+
+.inputs label {
+    display: flex;
+    flex-direction: column;
+}
+
