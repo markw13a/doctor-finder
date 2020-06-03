@@ -1,31 +1,28 @@
 import React, { useState, useCallback } from "react";
-import { 
-    ButtonGroup, 
-    Button 
-} from "@material-ui/core";
 
-const SampleValues = ({setLatitude, setLongitude}) => {
+const SampleValues = ({ setLatitude, setLongitude }) => {
     return (
-        <ButtonGroup variant="text" color="primary" aria-label="text primary button group">
-            <Button onClick={() => {
+        <div className="sample-values">
+            Or try these locations:
+            <button onClick={() => {
                 setLatitude(58.209);
                 setLongitude(-6.385);
             }}>
                 Stornoway
-            </Button>
-            <Button onClick={() => {
+            </button>
+            <button onClick={() => {
                 setLatitude(55.864);
                 setLongitude(-4.252);
             }}>
                 Glasgow
-            </Button>
-            <Button onClick={() => {
-                setLatitude(55.953251);
-                setLongitude(-3.188267);
+            </button>
+            <button onClick={() => {
+                setLatitude(55.953);
+                setLongitude(-3.188);
             }}>
                 Edinburgh
-            </Button>
-        </ButtonGroup>
+            </button>
+        </div>
     );
 };
 

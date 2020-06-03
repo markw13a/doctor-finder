@@ -1,11 +1,56 @@
+:root {
+    /* Between elements within the same component */
+    --padding-small: 0.5rem;
+    /* Between components */
+    --padding-large: 0.8rem;
+
+    --font-large: 1.25rem;
+    --font-medium: 1rem;
+    --font-small: 0.8rem;
+}
+
+/* GENERAL */
+h1 {
+    font-size: var(--font-large);
+}
+
+h3 {
+    font-size: var(--font-small);
+}
+
+h1, h3 {
+    font-weight: normal;
+}
+
 html {
     font-family: Roboto;
 }
 
+.container {
+    max-width: 600px;
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+
+header, .location-controls {
+    padding-bottom: var(--padding-large);
+}
+
+/* LOCATION CONTROLS */
 .location-controls .inputs {
     display: flex;
     flex-direction: column;
 }
+
+.inputs, .inputs label {
+    padding-bottom: var(--padding-small);
+} 
 
 .inputs label, .inputs button {
     /* Don't need to fill the screen as lat/long wouldn't usually exceed 6 digits */
@@ -13,11 +58,25 @@ html {
 }
 
 .inputs label {
-    padding-bottom: 0.5rem;
-}
-
-.inputs label {
     display: flex;
     flex-direction: column;
 }
 
+.sample-values, .sample-values button {
+    font-size: var(--font-small);
+}
+
+/* 
+    Style buttons to look like links
+    Feel that this is less obstrusive 
+*/
+.sample-values button {
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+/* Doctor table */
+th {
+    text-align: left;
+}

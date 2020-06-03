@@ -1,29 +1,24 @@
 import React, { useState } from 'react';
-import { Container, Typography } from "@material-ui/core";
 import { DoctorTable } from "./components/DoctorTable";
 import { LocationControls } from "./components/LocationControls"; 
 import "./app.css";
 
 const Header = () => (
-  <>
-    <Typography variant="h3">
-      Doctor finder
-    </Typography>
-    <Typography variant="subtitle1">
-      Find doctors in your area
-    </Typography>
-  </>
+  <header>
+    <h1> Doctor finder </h1>
+    <h3> Find doctors in your area </h3>
+  </header>
 );
 
 const App = () => {
   const [nearbyDoctors, setNearbyDoctors] = useState([]);
 
   return (
-    <Container maxWidth="sm">
+    <div className="container">
       <Header />
       <LocationControls setNearbyDoctors={setNearbyDoctors} />
       <DoctorTable nearbyDoctors={nearbyDoctors} />
-    </Container>
+    </div>
   );
 }
 

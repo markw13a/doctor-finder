@@ -17,7 +17,9 @@ const distanceBetweenPoints = (point1, point2) => {
     const dLong = toRadians(point2.longitude - point1.longitude);
 
     const x = dLong * Math.cos(toRadians(point2.latitude + point2.latitude)/2);
-    return Math.sqrt(x*x + dLat*dLat) * RADIUS_OF_EARTH;
+    const distance = Math.sqrt(x*x + dLat*dLat) * RADIUS_OF_EARTH;
+
+    return Math.round(distance);
 };
 
 const doctors = (ctx, next) => {
