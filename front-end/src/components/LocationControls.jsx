@@ -32,6 +32,10 @@ const LocationControls = ({ setNearbyDoctors }) => {
     const [error, setError] = useState();
 
     const fetchDoctorData = useCallback(() => {
+        if(latitude === undefined || longitude === undefined) {
+            return;
+        }
+        
         // Reset API error state
         setError();
         
@@ -44,11 +48,11 @@ const LocationControls = ({ setNearbyDoctors }) => {
     return (
         <div className="location-controls">
             <div className="inputs"> 
-                <label>
+                <label className="input-with-label">
                     Latitude
                     <input value={latitude} onChange={e => setLatitude(e.target.value)} />
                 </label>
-                <label>
+                <label className="input-with-label">
                     Longitude
                     <input value={longitude} onChange={e => setLongitude(e.target.value)} />
                 </label>

@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import { BookingModalDialog } from "./BookingModalDialog";
 
-const BookingButton = doctor => {
+const BookingButton = ({ doctor }) => {
     const [dialogIsOpen, setDialogIsOpen] = useState(false);
 
     // Putting the modal in here does technically mean that you could have multiple dialogs open at once
     // Don't think that this matters. Shouldn't be possible for user to get things in to that state anyway
     return (
         <>
-            <BookingModalDialog isOpen={dialogIsOpen} onClose={() => setDialogIsOpen(false)} {...doctor} />
+            <BookingModalDialog 
+                isOpen={dialogIsOpen} 
+                onClose={() => setDialogIsOpen(false)} 
+                doctor={doctor} 
+            />
             <button className="booking-button" onClick={() => setDialogIsOpen(true)}>
                 Book
             </button>
@@ -35,9 +39,9 @@ const DoctorTable = ({ nearbyDoctors }) => {
                     nearbyDoctors.map( doctor => (
                         <tr key={doctor.PracticeCode}>
                             <td> { doctor.GPPracticeName } </td>
-                            <td> { doctor.distance / 1000 } </td>
+                            <td> { doctor.distance.toFixed(3) } </td>
                             <td> 
-                                <BookingButton {...doctor} /> 
+                                <BookingButton doctor={doctor} /> 
                             </td>
                         </tr>
                     ))

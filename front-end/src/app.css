@@ -42,12 +42,13 @@ header, .location-controls {
     padding-bottom: var(--padding-large);
 }
 
-/* LOCATION CONTROLS */
-.location-controls .inputs {
+.input-with-label {
     display: flex;
     flex-direction: column;
+    padding-bottom: var(--padding-small);
 }
 
+/* LOCATION CONTROLS */
 .inputs, .inputs label {
     padding-bottom: var(--padding-small);
 } 
@@ -79,4 +80,16 @@ header, .location-controls {
 /* Doctor table */
 th {
     text-align: left;
+}
+
+/* Booking Modal Dialog */
+.booking-modal-dialog {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.booking-modal-dialog > * {
+    padding-bottom: var(--padding-small);
 }

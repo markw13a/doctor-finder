@@ -3,7 +3,7 @@
 import doctorsJSON from "./doctors.json";
 
 const toRadians = deg => (deg/180) * Math.PI;
-const RADIUS_OF_EARTH = 6371000;
+const RADIUS_OF_EARTH = 6371;
 /**
  * Calculates the distance "as the crow flies" between two lat/long co-ordinates
  * Equations got from https://www.movable-type.co.uk/scripts/latlong.html
@@ -19,7 +19,7 @@ const distanceBetweenPoints = (point1, point2) => {
     const x = dLong * Math.cos(toRadians(point2.latitude + point2.latitude)/2);
     const distance = Math.sqrt(x*x + dLat*dLat) * RADIUS_OF_EARTH;
 
-    return Math.round(distance);
+    return distance;
 };
 
 const doctors = (ctx, next) => {
