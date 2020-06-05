@@ -1,5 +1,8 @@
 {
   "name": "doctor-finder-back-end",
+  "engines": {
+    "node": "10.4.0"
+  },
   "version": "1.0.0",
   "description": "Provides API for doctor-finder",
   "main": "index.js",
@@ -7,7 +10,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node --experimental-modules app.mjs",
     "dev": "nodemon --experimental-modules app.mjs",
-    "heroku-postbuild": "npm install; cd front-end && npm install && npm run build"
+    "heroku-postbuild": "cd front-end && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
