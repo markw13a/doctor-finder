@@ -1,8 +1,0 @@
-{
-  "name": "doctor-finder",
-  "version": "1.0.0",
-  "scripts": {
-    "start": "node --experimental-modules ./back-end/app.mjs",
-    "heroku-postbuild": "cd front-end && npm install && npm run build"
-  }
-}
