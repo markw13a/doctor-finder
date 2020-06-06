@@ -1,4 +1,4 @@
-A dummy application that allows you to search for, and book an appointment with, GP practices in Scotland. If you have somehow wondered in here from the wider internet, please note the booking functionality does not actually work.
+A dummy application that allows you to search for, and book an appointment with, GP practices in Scotland. If you have somehow wandered in here from the wider internet, please note the booking functionality does not actually work.
 
 To run the app locally, run the below commands in the root directory:
 
